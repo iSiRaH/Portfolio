@@ -35,7 +35,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/iSiRaH"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -44,7 +44,7 @@ const Footer = () => {
               <FaGithub size={18} />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/isira-hansaja-nanayakkara/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -53,7 +53,7 @@ const Footer = () => {
               <FaLinkedinIn size={18} />
             </a>
             <a
-              href="https://x.com"
+              href="https://x.com/hansaja4156"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
