@@ -3,7 +3,7 @@ import projectPreview from "../assets/projects/preview1600_1000.jpeg";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "Crimelink Analyzer",
     description:
       "A responsive personal portfolio with smooth routing, reusable UI components, and clean section-based navigation.",
     techStack: ["React", "TypeScript", "Tailwind"],
@@ -13,7 +13,7 @@ const projects = [
     sourceUrl: "https://github.com",
   },
   {
-    title: "Task Management App",
+    title: "Transist Tracker",
     description:
       "A productivity app for planning work with status tracking, filters, and reusable card-based layouts.",
     techStack: ["React", "Node.js", "MongoDB"],
