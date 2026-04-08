@@ -2,6 +2,17 @@ import ProjectCard from "../components/ProjectCard";
 import projectPreview from "../assets/projects/preview1600_1000.jpeg";
 import profileImage from "../assets/profile.jpg";
 import { Link } from "react-router-dom";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { SiPostgresql, SiTypescript } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
+
+const myTechStack = [
+  { name: "React", icon: <FaReact size={20} /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "Node.js", icon: <FaNodeJs size={20} /> },
+  { name: "MongoDB", icon: <DiMongodb size={20} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={20} /> },
+];
 
 const projects = [
   {
@@ -77,13 +88,13 @@ const HomePage = () => {
         <h2 className="section-title">My Tech Stack</h2>
         <p className="section-subtitle">Technologies I use most often:</p>
         <div className="mt-5 flex flex-wrap gap-3">
-          {["React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL"].map(
-            (tech) => (
-              <span key={tech} className="chip">
-                {tech}
-              </span>
-            ),
-          )}
+          {myTechStack.map((tech) => (
+            <span key={tech.name} className="chip">
+              {tech.icon}
+              &nbsp;&nbsp;
+              {tech.name}
+            </span>
+          ))}
         </div>
       </section>
 

@@ -52,7 +52,7 @@ const ProjectCard = ({
               className="btn-primary text-sm"
             >
               <FaLink className="w-4 h-4" />
-              Live Preview
+              &nbsp;Live Preview
             </a>
           )}
 
@@ -64,7 +64,7 @@ const ProjectCard = ({
               className="btn-secondary text-sm"
             >
               <FaGithub className="w-5 h-5" />
-              Source Code
+              &nbsp;Source Code
             </a>
           )}
         </div>
