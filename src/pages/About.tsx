@@ -13,7 +13,7 @@ const About = () => {
             What I Do
           </h2>
           <p className="mt-2 text-[var(--text-muted)]">
-            I design and develop frontend and full-stack products, from reusable
+            I design and develop full-stack products, from reusable
             component systems to API-driven interfaces that are fast and
             accessible.
           </p>

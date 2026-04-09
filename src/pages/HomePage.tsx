@@ -2,16 +2,71 @@ import ProjectCard from "../components/ProjectCard";
 import projectPreview from "../assets/projects/preview1600_1000.jpeg";
 import profileImage from "../assets/profile.jpg";
 import { Link } from "react-router-dom";
-import { FaNodeJs, FaReact } from "react-icons/fa";
-import { SiPostgresql, SiTypescript } from "react-icons/si";
+import {
+  FaCss3,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaJava,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
+import {
+  SiExpress,
+  SiJavascript,
+  SiMysql,
+  SiPostgresql,
+  SiPostman,
+  SiSpring,
+  SiSqlite,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
+import { FaC, FaDartLang, FaFlutter } from "react-icons/fa6";
+import { TbBrandCSharp } from "react-icons/tb";
 
-const myTechStack = [
-  { name: "React", icon: <FaReact size={20} /> },
+const myLanguages = [
+  { name: "HTML", icon: <FaHtml5 /> },
+  { name: "CSS", icon: <FaCss3 /> },
+  { name: "C", icon: <FaC /> },
+  { name: "Java", icon: <FaJava /> },
   { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "Dart", icon: <FaDartLang /> },
+  { name: "C#", icon: <TbBrandCSharp /> },
+];
+
+const myFrameworks = [
+  { name: "React", icon: <FaReact size={20} /> },
+  { name: "React Native", icon: <FaReact size={20} /> },
   { name: "Node.js", icon: <FaNodeJs size={20} /> },
-  { name: "MongoDB", icon: <DiMongodb size={20} /> },
+  { name: "Express", icon: <SiExpress /> },
+  { name: "Spring Boot", icon: <SiSpring /> },
+  { name: "Flutter", icon: <FaFlutter /> },
+  { name: "Tailwind", icon: <SiTailwindcss /> },
+];
+
+const myDatabases = [
+  { name: "MySQL", icon: <SiMysql /> },
+  { name: "SQLite", icon: <SiSqlite /> },
   { name: "PostgreSQL", icon: <SiPostgresql size={20} /> },
+  { name: "MongoDB", icon: <DiMongodb size={20} /> },
+];
+
+const myTools = [
+  { name: "Git", icon: <FaGitAlt /> },
+  { name: "GitHub", icon: <FaGithub /> },
+  { name: "Docker", icon: <FaDocker /> },
+  { name: "Postman", icon: <SiPostman /> },
+];
+
+const techGroups = [
+  { title: "Languages", items: myLanguages },
+  { title: "Frameworks", items: myFrameworks },
+  { title: "Databases", items: myDatabases },
+  { title: "Tools", items: myTools },
 ];
 
 const projects = [
@@ -87,13 +142,25 @@ const HomePage = () => {
       <section className="page-section section-inner">
         <h2 className="section-title">My Tech Stack</h2>
         <p className="section-subtitle">Technologies I use most often:</p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          {myTechStack.map((tech) => (
-            <span key={tech.name} className="chip">
-              {tech.icon}
-              &nbsp;&nbsp;
-              {tech.name}
-            </span>
+        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {techGroups.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4"
+            >
+              <h3 className="font-['Space_Grotesk'] text-lg font-semibold">
+                {group.title}
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                {group.items.map((tech) => (
+                  <span key={tech.name} className="chip">
+                    {tech.icon}
+                    &nbsp;&nbsp;
+                    {tech.name}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import reactLogo from "../assets/react.svg";
+import siteLogo from "../assets/Favicon.png";
 
 const Footer = () => {
   return (
@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="page-section section-inner flex flex-col gap-7">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div className="flex items-center gap-3">
-            <img src={reactLogo} alt="React logo" className="h-10 w-10" />
+            <img
+              src={siteLogo}
+              alt="Isira Hansaja logo"
+              className="h-10 w-10 object-contain"
+            />
             <div>
               <p className="font-['Space_Grotesk'] text-base font-semibold">
                 Isira Hansaja
