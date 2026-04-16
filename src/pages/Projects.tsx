@@ -1,38 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
-import projectPreview from "../assets/projects/preview1600_1000.jpeg";
-
-const projects = [
-  {
-    title: "Crimelink Analyzer",
-    description:
-      "A responsive personal portfolio with smooth routing, reusable UI components, and clean section-based navigation.",
-    techStack: ["React", "TypeScript", "Tailwind"],
-    imageSrc: projectPreview,
-    imageAlt: "Portfolio website preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
-  {
-    title: "Transist Tracker",
-    description:
-      "A productivity app for planning work with status tracking, filters, and reusable card-based layouts.",
-    techStack: ["React", "Node.js", "MongoDB"],
-    imageSrc: projectPreview,
-    imageAlt: "Task management app preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
-  {
-    title: "E-Commerce Dashboard",
-    description:
-      "An analytics dashboard that visualizes sales trends, inventory data, and order performance in real time.",
-    techStack: ["React", "Express", "PostgreSQL"],
-    imageSrc: projectPreview,
-    imageAlt: "E-commerce dashboard preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
-];
+import projects from "../constants/projects";
 
 const Projects = () => {
   return (

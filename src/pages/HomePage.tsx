@@ -1,5 +1,4 @@
 import ProjectCard from "../components/ProjectCard";
-import projectPreview from "../assets/projects/preview1600_1000.jpeg";
 import profileImage from "../assets/profile.jpg";
 import { Link } from "react-router-dom";
 import {
@@ -26,6 +25,7 @@ import {
 import { DiMongodb } from "react-icons/di";
 import { FaC, FaDartLang, FaFlutter } from "react-icons/fa6";
 import { TbBrandCSharp } from "react-icons/tb";
+import projects from "../constants/projects";
 
 const myLanguages = [
   { name: "HTML", icon: <FaHtml5 /> },
@@ -67,39 +67,6 @@ const techGroups = [
   { title: "Frameworks", items: myFrameworks },
   { title: "Databases", items: myDatabases },
   { title: "Tools", items: myTools },
-];
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    description:
-      "A responsive personal portfolio with smooth routing, reusable UI components, and clean section-based navigation.",
-    techStack: ["React", "TypeScript", "Tailwind"],
-    imageSrc: projectPreview,
-    imageAlt: "Portfolio website preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "A productivity app for planning work with status tracking, filters, and reusable card-based layouts.",
-    techStack: ["React", "Node.js", "MongoDB"],
-    imageSrc: projectPreview,
-    imageAlt: "Task management app preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
-  {
-    title: "E-Commerce Dashboard",
-    description:
-      "An analytics dashboard that visualizes sales trends, inventory data, and order performance in real time.",
-    techStack: ["React", "Express", "PostgreSQL"],
-    imageSrc: projectPreview,
-    imageAlt: "E-commerce dashboard preview",
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com",
-  },
 ];
 
 const HomePage = () => {
