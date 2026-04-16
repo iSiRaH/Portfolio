@@ -1,4 +1,3 @@
-import projectPreview from "../assets/projects/preview1600_1000.jpeg";
 import AR_app_preview from "../assets/projects/AR_app.png";
 import crimelink_preview_1 from "../assets/projects/Crimelink/crimelink1.png";
 import crimelink_preview_2 from "../assets/projects/Crimelink/crimelink2.png";
