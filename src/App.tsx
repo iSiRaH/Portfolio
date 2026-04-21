@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import LandingPage from "./pages/LandingPage";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Certificates from "./pages/Certificates";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/certificates" element={<Certificates />} />
             <Route path="*" element={<HomePage />} />
           </Route>
         </Routes>
