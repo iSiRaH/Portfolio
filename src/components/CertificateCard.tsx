@@ -15,6 +15,7 @@ const CertificateCard = ({
         <img
           src={imageSrc}
           alt={imageAlt}
+          loading="lazy"
           className="h-60 w-full object-cover transition duration-500 hover:scale-[1.02]"
         />
       </div>
