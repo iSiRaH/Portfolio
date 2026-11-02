@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CertificateCard from "../components/CertificateCard";
 
 const certificates = [
@@ -74,90 +73,45 @@ const certificates = [
       "https://res.cloudinary.com/de8t0e5q5/image/upload/v1777022076/N.W.J_Isira_Hansaja_s9vb8k.jpg",
     imageAlt: "Road to Rush Coder Hackathon certificate",
   },
+  {
+    name: "Node.js, Express, MongoDB: Complete Bootcamp",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1793599382/nodejs_udemy_certificate_sbpstb.jpg",
+    imageAlt: "Node.js, Express, MongoDB: Complete Bootcamp certificate",
+  },
+  {
+    name: "Machine Learning for Beginners",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1793599381/Machine_Learning_Beginners_Sololearn_bj6z95.jpg",
+    imageAlt: "Machine Learning for Beginners certificate",
+  },
+  {
+    name: "Introduction to SQL",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1792034612/Introduction_to_SQL_Sololearn_aema9j.jpg",
+    imageAlt: "Introduction to SQL certificate",
+  },
 ];
 
 function Certificates() {
-  const certificatesPerSlide = 2;
-  const totalSlides = Math.ceil(certificates.length / certificatesPerSlide);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const slideStartIndex = activeSlide * certificatesPerSlide;
-  const visibleCertificates = certificates.slice(
-    slideStartIndex,
-    slideStartIndex + certificatesPerSlide,
-  );
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % totalSlides);
-    }, 3400);
-
-    return () => window.clearInterval(intervalId);
-  }, [totalSlides]);
-
-  const showPrevious = () => {
-    setActiveSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
-
-  const showNext = () => {
-    setActiveSlide((prev) => (prev + 1) % totalSlides);
-  };
-
   return (
     <section className="page-section section-inner fade-in">
-      <h1 className="section-title">Certificates</h1>
+      <p className="eyebrow">Continuous learning</p>
+      <h1 className="section-title">Certificates &amp; milestones</h1>
       <p className="section-subtitle">
         Professional learning milestones and certifications that support my
         engineering workflow.
       </p>
 
-      <div className="mt-8">
-        <div className="relative overflow-hidden rounded-2xl">
-          <div className="grid grid-cols-1 gap-4 px-1 transition duration-500 md:grid-cols-2 md:px-10">
-            {visibleCertificates.map((certificate) => (
-              <CertificateCard
-                key={certificate.name}
-                name={certificate.name}
-                imageSrc={certificate.imageSrc}
-                imageAlt={certificate.imageAlt}
-              />
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={showPrevious}
-            aria-label="Show previous certificate"
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-(--border) bg-(--surface-strong) px-3 py-2 text-lg font-semibold transition hover:-translate-y-1/2 hover:border-(--brand)"
-          >
-            &#8249;
-          </button>
-
-          <button
-            type="button"
-            onClick={showNext}
-            aria-label="Show next certificate"
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-(--border) bg-(--surface-strong) px-3 py-2 text-lg font-semibold transition hover:-translate-y-1/2 hover:border-(--brand)"
-          >
-            &#8250;
-          </button>
-        </div>
-
-        <div className="mt-5 flex items-center justify-center gap-2">
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => setActiveSlide(index)}
-              aria-label={`Go to certificates slide ${index + 1}`}
-              className={`h-2.5 w-2.5 rounded-full transition ${
-                index === activeSlide
-                  ? "bg-(--brand)"
-                  : "bg-(--border) hover:bg-(--text-muted)"
-              }`}
-            />
-          ))}
-        </div>
+      <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {certificates.map((certificate) => (
+          <CertificateCard
+            key={certificate.name}
+            name={certificate.name}
+            imageSrc={certificate.imageSrc}
+            imageAlt={certificate.imageAlt}
+          />
+        ))}
       </div>
     </section>
   );

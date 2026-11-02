@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import siteLogo from "../assets/Favicon.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -64,6 +65,15 @@ const Footer = () => {
               className="rounded-full border border-[var(--border)] bg-[var(--surface-strong)] p-2.5 text-[var(--text)] transition hover:-translate-y-0.5 hover:text-[var(--brand)]"
             >
               <FaXTwitter size={18} />
+            </a>
+            <a
+              href="https://wa.me/qr/QUAXW3MK6NKEI1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="rounded-full border border-[var(--border)] bg-[var(--surface-strong)] p-2.5 text-[var(--text)] transition hover:-translate-y-0.5 hover:text-[var(--brand)]"
+            >
+              <FaWhatsapp size={18} />
             </a>
           </div>
         </div>
