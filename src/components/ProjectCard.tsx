@@ -40,17 +40,20 @@ const ProjectCard = ({
   }, [images]);
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="overflow-hidden">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface-strong)] transition duration-300 hover:-translate-y-1 hover:border-[var(--brand)]/50 hover:shadow-[var(--shadow)]">
+      <div className="overflow-hidden bg-[var(--chip)]">
         <img
           src={currentImageSrc}
           alt={imageAlt}
-          className="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
+          loading="lazy"
+          width="640"
+          height="400"
+          className="aspect-[8/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
         />
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-6">
-        <h3 className="font-['Space_Grotesk'] text-xl font-bold">{title}</h3>
+        <h3 className="font-['Space_Grotesk'] text-xl font-semibold tracking-tight">{title}</h3>
         <p className="text-sm leading-relaxed text-[var(--text-muted)]">
           {description}
         </p>
@@ -72,7 +75,7 @@ const ProjectCard = ({
               className="btn-primary text-sm"
             >
               <FaLink className="w-4 h-4" />
-              &nbsp;Live Preview
+              Live Preview
             </a>
           )}
 
@@ -84,7 +87,7 @@ const ProjectCard = ({
               className="btn-secondary text-sm"
             >
               <FaGithub className="w-5 h-5" />
-              &nbsp;Source Code
+              Source Code
             </a>
           )}
         </div>

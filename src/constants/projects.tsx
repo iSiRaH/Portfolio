@@ -17,11 +17,21 @@ import bluelanka_guide_preview_4 from "../assets/projects/Bluelanka Guide/bluela
 import bluelanka_guide_preview_5 from "../assets/projects/Bluelanka Guide/bluelanka_5.png";
 import bluelanka_guide_preview_6 from "../assets/projects/Bluelanka Guide/bluelanka_6.png";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  techStack: string[];
+  imageSrc: string | string[];
+  imageAlt: string;
+  liveUrl?: string;
+  sourceUrl?: string;
+};
+
+const projects: Project[] = [
   {
     title: "Crimelink Analyzer",
     description:
-      "An intelligent crime analyzing web application that helps law enforcement agencies to analyze crime data and identify patterns and trends.",
+      "A crime-analysis web application that helps law-enforcement teams explore data, uncover patterns, and identify trends.",
     techStack: [
       "React",
       "TypeScript",
@@ -37,13 +47,12 @@ const projects = [
       crimelink_preview_4,
     ],
     imageAlt: "Crimelink Analyzer preview",
-    liveUrl: "https://example.com",
     sourceUrl: "https://github.com/iSiRaH/Crimelink_Analyzer",
   },
   {
-    title: "Transist Tracker",
+    title: "Transit Tracker",
     description:
-      "A real-time public transportation tracking application that lets users to get location and eta of services.",
+      "A real-time public transport application that helps passengers see vehicle locations and estimated arrival times.",
     techStack: ["Flutter", "Dart", "Node.js", "Express", "MongoDB"],
     imageSrc: [
       transist_tracker_preview_1,
@@ -54,23 +63,21 @@ const projects = [
       transist_tracker_preview_6,
     ],
     imageAlt: "Transist Tracker preview",
-    liveUrl: "https://example.com",
     sourceUrl: "https://github.com/iSiRaH/Transist-Tracker-user",
   },
   {
     title: "Placeit-AR",
     description:
-      "An AR application that detects flat surfaces and lets users to place objects on augmented reality.",
+      "An augmented-reality application that detects flat surfaces and lets users place virtual objects in their environment.",
     techStack: ["Unity", "Ar-Core", "C#", "C++"],
     imageSrc: [AR_app_preview],
     imageAlt: "Placeit-AR preview",
-    liveUrl: "https://example.com",
     sourceUrl: "https://github.com/iSiRaH/AR_app",
   },
   {
     title: "BlueLanka Guide",
     description:
-      "A desktop application that lets users to explore and discover information about various costal places in Sri Lanka.",
+      "A desktop guide for exploring and discovering information about coastal destinations across Sri Lanka.",
     techStack: ["Java", "JavaFX", "CSS", "SQLite"],
     imageSrc: [
       bluelanka_guide_preview_1,
@@ -81,13 +88,12 @@ const projects = [
       bluelanka_guide_preview_6,
     ],
     imageAlt: "BlueLanka Guide preview",
-    liveUrl: "https://example.com",
     sourceUrl: "https://github.com/iSiRaH/java-project",
   },
   {
     title: "Marketplace",
     description:
-      "A web application that lets users create posts to sell their products and services, and also lets users to buy products and services from other users.",
+      "A marketplace where people can create listings and discover products and services offered by other users.",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -98,7 +104,6 @@ const projects = [
     ],
     imageSrc: [marketplace_preview_1],
     imageAlt: "Marketplace preview",
-    liveUrl: "https://example.com",
     sourceUrl: "https://github.com/iSiRaH/Marketplace",
   },
 ];

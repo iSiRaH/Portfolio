@@ -10,13 +10,15 @@ const CertificateCard = ({
   imageAlt = "Certificate preview",
 }: CertificateCardProps) => {
   return (
-    <article className="overflow-hidden rounded-2xl border border-(--border) bg-(--surface-strong) shadow-sm">
+    <article className="group overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand)]/50">
       <div className="overflow-hidden">
         <img
           src={imageSrc}
           alt={imageAlt}
           loading="lazy"
-          className="h-60 w-full object-cover transition duration-500 hover:scale-[1.02]"
+          width="640"
+          height="400"
+          className="aspect-[8/5] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
         />
       </div>
 
