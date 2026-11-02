@@ -74,6 +74,24 @@ const certificates = [
       "https://res.cloudinary.com/de8t0e5q5/image/upload/v1777022076/N.W.J_Isira_Hansaja_s9vb8k.jpg",
     imageAlt: "Road to Rush Coder Hackathon certificate",
   },
+  {
+    name: "Node.js, Express, MongoDB: Complete Bootcamp",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1793599382/nodejs_udemy_certificate_sbpstb.jpg",
+    imageAlt: "Node.js, Express, MongoDB: Complete Bootcamp certificate",
+  },
+  {
+    name: "Machine Learning for Beginners",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1793599381/Machine_Learning_Beginners_Sololearn_bj6z95.jpg",
+    imageAlt: "Machine Learning for Beginners certificate",
+  },
+  {
+    name: "Introduction to SQL",
+    imageSrc:
+      "https://res.cloudinary.com/de8t0e5q5/image/upload/v1792034612/Introduction_to_SQL_Sololearn_aema9j.jpg",
+    imageAlt: "Introduction to SQL certificate",
+  },
 ];
 
 function Certificates() {
