@@ -16,6 +16,20 @@ import bluelanka_guide_preview_3 from "../assets/projects/Bluelanka Guide/bluela
 import bluelanka_guide_preview_4 from "../assets/projects/Bluelanka Guide/bluelanka_4.png";
 import bluelanka_guide_preview_5 from "../assets/projects/Bluelanka Guide/bluelanka_5.png";
 import bluelanka_guide_preview_6 from "../assets/projects/Bluelanka Guide/bluelanka_6.png";
+import lams_preview_1 from "../assets/projects/lams/localhost_8000_lams_.png";
+import lams_preview_2 from "../assets/projects/lams/localhost_8000_lams_dashboard.png";
+import lams_preview_3 from "../assets/projects/lams/localhost_8000_lams_acquisition-workflow.png";
+import lams_preview_4 from "../assets/projects/lams/localhost_8000_lams_documents.png";
+import lams_preview_5 from "../assets/projects/lams/localhost_8000_lams_gis-maps.png";
+import lams_preview_6 from "../assets/projects/lams/localhost_8000_lams_mark-progress.png";
+import lams_preview_7 from "../assets/projects/lams/localhost_8000_lams_notifications.png";
+import lams_preview_8 from "../assets/projects/lams/localhost_8000_lams_land-parcels.png";
+import cpi_preview_1 from "../assets/projects/cpi/cpi-website.vercel.app_.png";
+import cpi_preview_2 from "../assets/projects/cpi/cpi-website.vercel.app_shop.png";
+import cpi_preview_3 from "../assets/projects/cpi/cpi-website.vercel.app_about-us.png";
+import cpi_preview_4 from "../assets/projects/cpi/cpi-website.vercel.app_contact.png";
+import multi_tools_preview_1 from "../assets/projects/multi-tools/www.multi-tools.app_.png";
+import multi_tools_preview_2 from "../assets/projects/multi-tools/www.multi-tools.app_dark.png";
 
 type Project = {
   title: string;
@@ -23,11 +37,48 @@ type Project = {
   techStack: string[];
   imageSrc: string | string[];
   imageAlt: string;
-  liveUrl?: string;
   sourceUrl?: string;
+  previewUrl?: string;
 };
 
 const projects: Project[] = [
+  {
+    title: "Land Acquisition Management System",
+    description:
+      "A web-based enterprise management system developed for the Chief Ministry of the Southern Province to digitize, streamline, and track land acquisition processes, documentation, compensation, and administrative workflows.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Laravel",
+      "PHP",
+      "Inertia.js",
+      "Tailwind",
+      "MySQL",
+    ],
+    imageSrc: [
+      lams_preview_1,
+      lams_preview_2,
+      lams_preview_3,
+      lams_preview_4,
+      lams_preview_5,
+      lams_preview_6,
+      lams_preview_7,
+      lams_preview_8,
+    ],
+    imageAlt: "Land Acquisition Management System preview",
+    sourceUrl:
+      "https://github.com/Chief-Ministry-Southern-Province/Land-Acquisition-Management-System",
+  },
+  {
+    title: "MultiTools",
+    description:
+      "An all-in-one web utility platform offering free, browser-based online tools designed to simplify everyday developer tasks, boost productivity, and streamline digital workflows.",
+    techStack: ["Next.js", "TypeScript", "Tailwind"],
+    imageSrc: [multi_tools_preview_1, multi_tools_preview_2],
+    imageAlt: "MultiTools preview",
+    sourceUrl: "https://github.com/Hansaja132/all-tools-online",
+    previewUrl: "https://www.multi-tools.app/",
+  },
   {
     title: "Crimelink Analyzer",
     description:
@@ -50,6 +101,23 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/iSiRaH/Crimelink_Analyzer",
   },
   {
+    title: "CPI Footwear",
+    description:
+      "A full-stack e-commerce showcase built for CPI footwear brand, featuring a responsive product catalog, dynamic content management, and a secure administrative dashboard.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Tailwind",
+      "MongoDB",
+    ],
+    imageSrc: [cpi_preview_1, cpi_preview_2, cpi_preview_3, cpi_preview_4],
+    imageAlt: "CPI Footwear preview",
+    previewUrl: "https://cpi-website.vercel.app/",
+  },
+  {
     title: "Transit Tracker",
     description:
       "A real-time public transport application that helps passengers see vehicle locations and estimated arrival times.",
@@ -62,7 +130,7 @@ const projects: Project[] = [
       transist_tracker_preview_5,
       transist_tracker_preview_6,
     ],
-    imageAlt: "Transist Tracker preview",
+    imageAlt: "Transit Tracker preview",
     sourceUrl: "https://github.com/iSiRaH/Transist-Tracker-user",
   },
   {
