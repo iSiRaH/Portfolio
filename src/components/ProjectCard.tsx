@@ -7,8 +7,8 @@ type ProjectCardProps = {
   techStack: string[];
   imageSrc: string | string[];
   imageAlt?: string;
-  liveUrl?: string;
   sourceUrl?: string;
+  previewUrl?: string;
 };
 
 const ProjectCard = ({
@@ -17,8 +17,8 @@ const ProjectCard = ({
   techStack,
   imageSrc,
   imageAlt = "Project preview",
-  liveUrl,
   sourceUrl,
+  previewUrl
 }: ProjectCardProps) => {
   const images = useMemo(
     () => (Array.isArray(imageSrc) ? imageSrc : [imageSrc]),
@@ -67,15 +67,15 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-auto flex items-center gap-3 pt-2">
-          {liveUrl && (
+          {previewUrl && (
             <a
-              href={liveUrl}
+              href={previewUrl}
               target="_blank"
               rel="noreferrer"
               className="btn-primary text-sm"
             >
               <FaLink className="w-4 h-4" />
-              Live Preview
+              Preview
             </a>
           )}
 

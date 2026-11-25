@@ -172,7 +172,7 @@ const HomePage = () => {
               techStack={project.techStack}
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
-              liveUrl={project.liveUrl}
+              previewUrl={project.previewUrl}
               sourceUrl={project.sourceUrl}
             />
           ))}
